@@ -1,4 +1,3 @@
-#模拟登陆Github
 import setting
 import requests
 from lxml import etree
@@ -34,9 +33,19 @@ class Login(object):
                 'authenticity_token':self.get_authenticity_token()
             }
         print("data 提取完毕。。。。。")
-        response = self.session.post(self.post_url,headers=self.header,data = data)
-        with open("github.html","w") as f:
+        try:
+            response = self.session.post(self.post_url,headers=self.header,data = data)
+            if response.status_code==200:
+                print("完成登陆")
+            else:
+                print("密码用户名可能不正确，请重新配置")
+                exit()
+        except:
+            print("密码用户名可能不正确，请重新配置")
+            exit()
+        with open("login_git.html","w") as f:
             f.write(response.text)
+        print('首页已经保存为login_git.html')
 if __name__=="__main__":
     user = setting.USER
     pwd  = setting.PWD
