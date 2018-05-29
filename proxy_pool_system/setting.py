@@ -1,0 +1,11 @@
+HOST='127.0.0.1'
+PASSWORD=None
+PORT=6379
+INITIAL_SCORE=10
+REDIS_KRY = 'proxies'
+MAX_SCORE = 100
+MIN_SCORE = 0
+TEST_URL = 'http://www.baidu.com'
+API_ENABLE = True
+CRAWL_ENABLE = True
+TEST_ENABLE = True
