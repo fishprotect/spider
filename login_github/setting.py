@@ -6,5 +6,5 @@
     USER = "myaacount"
     PWD  = "mypassword"
 '''
-USER    =   "dongyuhong163@163.com"
-PWD     =   "1992dyh.6"
+USER    =   "myaccount"
+PWD     =   "mypassword"
